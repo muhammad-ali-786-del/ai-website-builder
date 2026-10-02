@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home Nest — Modern Home Goods</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --accent:#0ea5a4; /* teal */
+      --muted:#6b7280;
+      --radius:12px;
+      --shadow: 0 6px 20px rgba(16,24,40,0.08);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#0f172a; -webkit-font-smoothing:antialiased}
+    .container{max-width:1100px; margin:0 auto; padding:48px 20px}
+
+    /* Header / Nav */
+    header{display:flex; align-items:center; justify-content:space-between; gap:24px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo{width:44px; height:44px; background:linear-gradient(135deg,#06b6d4,#3b82f6); border-radius:10px; display:flex; align-items:center; justify-content:center; color:white; font-weight:700; box-shadow:var(--shadow)}
+    nav a{color:var(--muted); text-decoration:none; margin-left:18px; font-weight:500}
+    .cta{background:var(--accent); color:white; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns:1fr 420px; gap:32px; align-items:center; margin-top:36px}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.6), transparent); padding:34px; border-radius:var(--radius); box-shadow:var(--shadow)}
+    h1{font-size:clamp(28px,4vw,44px); margin:0 0 12px}
+    p.lead{color:var(--muted); margin:0 0 20px}
+    .features{display:flex; gap:12px; margin-top:18px}
+    .feature{background:#fff; padding:10px 12px; border-radius:10px; box-shadow:0 4px 12px rgba(2,6,23,0.06); font-weight:600}
+    .hero-visual{background:linear-gradient(135deg,#ecfeff,#f0f9ff); border-radius:16px; padding:18px; display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow)}
+    .mock{width:360px; height:260px; border-radius:12px; background:linear-gradient(180deg,#ffffff,#f8fafc); display:flex; flex-direction:column; gap:12px; padding:16px}
+    .mock .image{flex:1; background:linear-gradient(90deg,#e6fffa,#ebf8ff); border-radius:8px}
+    .mock .row{display:flex; gap:8px}
+    .mock .dot{width:36px; height:36px; background:#fff; border-radius:8px}
+
+    /* Products */
+    .products{margin-top:42px}
+    .products-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:18px}
+    .product{background:var(--card); padding:18px; border-radius:14px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:12px}
+    .product-img{height:160px; border-radius:10px; background: linear-gradient(135deg,#fff1f2,#fff7ed); display:flex; align-items:center; justify-content:center; color:var(--muted); font-weight:700}
+    .product h3{margin:0; font-size:16px}
+    .price{color:var(--accent); font-weight:700}
+    .prod-actions{display:flex; gap:8px; margin-top:auto}
+    .btn{padding:10px 12px; border-radius:10px; border:0; cursor:pointer}
+    .btn-primary{background:var(--accent); color:white; font-weight:600}
+    .btn-ghost{background:transparent; border:1px solid #e6e9ef; color:var(--muted)}
+
+    /* Contact */
+    .contact{margin-top:48px; display:grid; grid-template-columns:1fr 360px; gap:24px; align-items:start}
+    .contact-card{padding:22px; background:linear-gradient(180deg,#ffffff, #fbfdff); border-radius:12px; box-shadow:var(--shadow)}
+    label{display:block; font-size:13px; color:var(--muted); margin-bottom:6px}
+    input, textarea{width:100%; padding:10px 12px; border-radius:8px; border:1px solid #e6e9ef; font-size:14px}
+    textarea{min-height:120px; resize:vertical}
+    .form-actions{display:flex; justify-content:flex-end; margin-top:10px}
+
+    /* Footer */
+    footer{padding:28px 0; text-align:center; color:var(--muted); font-size:14px}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .contact{grid-template-columns:1fr}
+      .hero-visual{order:-1}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">HN</div>
+        <div>
+          <div style="font-weight:700">Home Nest</div>
+          <div style="font-size:12px;color:var(--muted)">Comfort for every home</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#products">Shop Now</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-card">
+          <h1>Thoughtfully designed home essentials for cozy living</h1>
+          <p class="lead">Discover curated furniture and decor that bring comfort and style to every corner of your home. Sustainable materials, modern aesthetics.</p>
+          <div class="features">
+            <div class="feature">Free shipping</div>
+            <div class="feature">30-day returns</div>
+            <div class="feature">Eco materials</div>
+          </div>
+          <div style="margin-top:20px">
+            <a class="btn btn-primary" href="#products">Browse Products</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="mock">
+            <div class="image"></div>
+            <div class="row">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div style="display:flex; justify-content:space-between; color:var(--muted); font-size:13px">
+              <div>Modern Sofa</div>
+              <div style="color:var(--accent); font-weight:700">From $499</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="products">
+        <header style="display:flex; align-items:center; justify-content:space-between; gap:12px">
+          <div>
+            <h2 style="margin:0">Featured Products</h2>
+            <div style="color:var(--muted); margin-top:6px">Handpicked items ready for your home</div>
+          </div>
+          <div style="color:var(--muted)">Showing 6 items</div>
+        </header>
+
+        <div class="products-grid" style="margin-top:18px">
+          <article class="product">
+            <div class="product-img">Sofa</div>
+            <h3>Minimalist Sofa</h3>
+            <div style="color:var(--muted); font-size:13px">Soft upholstery, solid wood frame</div>
+            <div style="display:flex; justify-content:space-between; align-items:center">
+              <div class="price">$899</div>
+              <div class="prod-actions">
+                <button class="btn btn-ghost">Details</button>
+                <button class="btn btn-primary">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-img">Rug</div>
+            <h3>Handwoven Rug</h3>
+            <div style="color:var(--muted); font-size:13px">Natural fibers, warm tones</div>
+            <div style="display:flex; justify-content:space-between; align-items:center">
+              <div class="price">$249</div>
+              <div class="prod-actions">
+                <button class="btn btn-ghost">Details</button>
+                <button class="btn btn-primary">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-img">Lamp</div>
+            <h3>Table Lamp</h3>
+            <div style="color:var(--muted); font-size:13px">Warm LED, dimmable</div>
+            <div style="display:flex; justify-content:space-between; align-items:center">
+              <div class="price">$79</div>
+              <div class="prod-actions">
+                <button class="btn btn-ghost">Details</button>
+                <button class="btn btn-primary">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-img">Chair</div>
+            <h3>Accent Chair</h3>
+            <div style="color:var(--muted); font-size:13px">Curved design, walnut legs</div>
+            <div style="display:flex; justify-content:space-between; align-items:center">
+              <div class="price">$349</div>
+              <div class="prod-actions">
+                <button class="btn btn-ghost">Details</button>
+                <button class="btn btn-primary">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-img">Table</div>
+            <h3>Dining Table</h3>
+            <div style="color:var(--muted); font-size:13px">Extendable, solid oak</div>
+            <div style="display:flex; justify-content:space-between; align-items:center">
+              <div class="price">$1,299</div>
+              <div class="prod-actions">
+                <button class="btn btn-ghost">Details</button>
+                <button class="btn btn-primary">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-img">Cushion</div>
+            <h3>Decor Cushions (Set)</h3>
+            <div style="color:var(--muted); font-size:13px">Assorted sizes and colors</div>
+            <div style="display:flex; justify-content:space-between; align-items:center">
+              <div class="price">$59</div>
+              <div class="prod-actions">
+                <button class="btn btn-ghost">Details</button>
+                <button class="btn btn-primary">Add</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="contact-card">
+          <h3 style="margin-top:0">Get in touch</h3>
+          <p style="color:var(--muted); margin-top:6px">Have a question or custom request? Send us a message and we'll reply within 1–2 business days.</p>
+
+          <form id="contactForm" style="margin-top:14px">
+            <div style="margin-bottom:12px">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required>
+            </div>
+            <div style="margin-bottom:12px">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            </div>
+            <div style="margin-bottom:12px">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your project or question" required></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Send message</button>
+            </div>
+          </form>
+          <div id="formStatus" style="margin-top:12px;color:var(--muted);font-size:14px"></div>
+        </div>
+
+        <aside style="padding:18px; border-radius:12px; background:linear-gradient(180deg,#fff,#fbfdff); box-shadow:var(--shadow);">
+          <h4 style="margin:0 0 8px">Visit our showroom</h4>
+          <div style="color:var(--muted); font-size:13px">123 Nest Lane<br>Home City, HC 12345</div>
+          <div style="margin-top:12px">
+            <strong>Email</strong>
+            <div style="color:var(--muted); font-size:13px">hello@homenest.example</div>
+          </div>
+          <div style="margin-top:12px">
+            <strong>Phone</strong>
+            <div style="color:var(--muted); font-size:13px">(555) 123-4567</div>
+          </div>
+        </aside>
+      </section>
+
+    </main>
+
+    <footer>
+      © "Home Nest" — Comfortable living, designed with care.
+    </footer>
+
+  </div>
+
+  <script>
+    // Simple contact form handling (no backend) — demonstrates validation and feedback
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+      if(!name || !email || !message){
+        status.textContent = 'Please fill in all fields.';
+        return;
+      }
+      // Fake sending...
+      status.style.color = 'var(--muted)';
+      status.textContent = 'Sending...';
+      setTimeout(()=>{
+        status.style.color = 'green';
+        status.textContent = 'Thanks! Your message has been received.';
+        form.reset();
+      }, 900);
+    });
+
+    // Simple product details demo
+    document.querySelectorAll('.btn-ghost').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const card = e.target.closest('.product');
+        const title = card.querySelector('h3').innerText;
+        alert(title + '\n\nMore details will be available soon.');
+      })
+    });
+  </script>
+</body>
+</html>
